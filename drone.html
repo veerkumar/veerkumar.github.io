@@ -47,7 +47,21 @@
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
     <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
-
+    <style>
+    .button {
+      background-color: #993333; /* Green */
+      border: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 10px;
+      margin: 2px 2px;
+      cursor: pointer;
+    }
+    .hashtag {border-radius: 50%;}
+    </style>
      
   </head>
   <body>    
@@ -102,15 +116,64 @@
         <div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://staticxx.facebook.com/connect/xd_arbiter/r/uN4_cXtJDGb.js?version=42#channel=f2d5e03ddc9941c&amp;origin=file%3A%2F%2F" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="https://staticxx.facebook.com/connect/xd_arbiter/r/uN4_cXtJDGb.js?version=42#channel=f2d5e03ddc9941c&amp;origin=file%3A%2F%2F" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
 
          <div class="margin-t-100 padding-v-60">
+          <div style="margin-left: 10%">
+          <button class="button hastag">Machine Learning</button>
+          <button class="button hastag">ROS</button> 
+          <button class="button hastag">LiDAR</button>
+          <button class="button hastag">Stero Vision </button>
+          <button class="button hastag">3D SLAM</button>  
+           <button class="button hastag">Azure</button>
+          <button class="button hastag">Obstical avoidence</button>
+          <button class="button hastag">Barcode scanning</button>
+        </div>
                         <!-- Resume Box / About -->
              <div class="resume-box" style="    padding-left: 10%; padding-right: 10%;">
-                            <span class="icon animated fadeInDown visible" data-animation="fadeInDown"><i class="fa fa-comment"></i></span>
+                            <span class="icon animated fadeInDown visible" data-animation="fadeInDown"></span>
                             <h4>About <strong>HackaDrone </strong></h4>
-                            <p class="lead"> I am a Software Engineer at Cisco Systems, working on mDNS and DNS protocol implementations. I develop rovers and drones at <a href = "https://www.cisco.com/c/m/en_in/thingqbator.html" target="blank"> <i>ThingQbator</i></a>, Cisco innovation lab for various applications. 
+                            <p class="lead"> Hackadrone is first of its kind, All India Hackathon on UAV/Drones being organized by Cyient Ltd, DJI sponsored by Microsoft and Govt.of Telangana. <a href = "http://www.hackadrone.in" target="blank"> <i>More info</i></a>
+                            <div class="row" style="padding-left: 15%">
+                              <div class="col s12 offset-m2 m8">
+                                <div class="video-container">
+                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/dIA6EjMskrc?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                            </div>
                             <br><br>
-                            I strongly believe that technology is the solution for all problems. With years of experience as software developer, research engineer, application developer and freelancer, I have gained skills to effectively model user friendly solutions. Having worked with companies like Cisco, I have realized the importance of providing smarter solutions to the world that is continuously growing.
+                            <h4><strong> Problem statment </strong></h4>
+                            <p class="lead">
+                            As warehouse's are getting bigger with scaling heights, invertory managment/auditing is becoming a huge problem. Today in warehouse package fetching and Placing is almost automated but still there is no automated solution for invertory auditing.
+                            Well a video can explain it better!!
+                          </p>
+                            <div class="row" style="padding-left: 15%">
+                              <div class="col s12 offset-m2 m8">
+                                <div class="video-container">
+                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/h7KHvUkxquY?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                            </div>
                             <br><br>
-                            I am eager to learn and contribute to the fields that remain untouched. </p>
+                            <h4><strong> Solution </strong></h4>
+                            <p class="lead">
+                              Warehouse is not a drone friendly enviroment, it brings many challenges which are consider not significant in open space. For example Drone navigation system rely on GPS, as GPS signals are very weak they cannot penetrate warehouse walls/roof. To put in simple terms, its a GPS denied enviroment. On top of that, GPS possess 1-5 meter variance which is quite significant in indoor enviroment. So basically to identify a location we need to switch to local reference navigation which in turn requires area mapping i.e 3D SLAM. 
+                              Secondly, Drone is highly prone to collision specially in indoor enviroment, it need enviroment sensing from all 6 direction(lift, right, front, back, top, bottom).
+                          </p>
+                            <p class="lead" style=""> Technology used:
+                                  <ul style="list-style-type:disc; padding-left: 5%" class="lead">
+                                    <li style="">ML: For object classification</li>
+                                    <li>Stero Camera: To make point cloud and  SLAM </li>
+                                    <li>ROS: Path planning and navigation i.e move_base</li>
+                                    <li>Azure: cloud storage</li>
+                                    <li>OpenCV: Barcode scanning</li>
+                                    <li>DJI ROS SDK</li>
+                                    <li>Android app: For user control, live feed, and inventory display</li>
+                                    <li>Nvidia TX2: onboard heavy computing</li>
+                                    
+                                  </ul>  
+                          </p>
+                          <div>
+                            <img class="gallery_img" height="50%" width="60%" style="padding-left: 16%;" src="assets/img/photos/warehouse_solution.png" alt="img">
+                              
+                          </div>
              </div>
         </div>
 
