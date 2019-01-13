@@ -47,7 +47,34 @@
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
     <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="js/jquery.localScroll.js"></script>
+    <script type="text/javascript">
+                window.smoothScroll = function(target) {
+            var scrollContainer = target;
+            do { //find scroll container
+                scrollContainer = scrollContainer.parentNode;
+                if (!scrollContainer) return;
+                scrollContainer.scrollTop += 1;
+            } while (scrollContainer.scrollTop == 0);
 
+            var targetY = 0;
+            do { //find the top of target relatively to the container
+                if (target == scrollContainer) break;
+                targetY += target.offsetTop;
+            } while (target = target.offsetParent);
+
+            scroll = function(c, a, b, i) {
+                i++; if (i > 30) return;
+                c.scrollTop = a + (b - a) / 30 * i;
+                setTimeout(function(){ scroll(c, a, b, i); }, 20);
+            }
+            // start scrolling
+            scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+        }
+    </script>
+      
      
   </head>
   <body>    
@@ -93,10 +120,10 @@
             <!-- BG Image -->
             <div style="background-image: url(&quot;assets/img/photos/it-bg01.jpg&quot;);" class="bg-image animated infinite zooming visible"><img style="display: none;" src="assets/img/photos/it-bg01.jpg" alt="..."></div>
             <!-- Middle -->
-            <div class="container container-wide v-bottom padding-v-80" align="right">
-                <h1 class="text-lg margin-b-0"><font color = "white">Hi! I’m <strong>Pramod Kumar</strong></font></h1>
-                 <h5 class="text-tertiary margin-b-40"><font color="white">Software Engineer at Cisco</h5></font>
-                <span data-target="local-scroll"><a href="#resume" class="btn btn-lg btn-primary"><span>Know me more</span><i class="fa fa-arrow-down"></i></a>
+            <div class="container container-wide  margin-t-20" align="left" style="margin-left: 1%; padding-top: 14%">
+                <h1 class="text-lg margin-b-0"><font color = "black">Hi! I’m <strong>Pramod Kumar</strong></font></h1>
+                 <h5 class="text-tertiary margin-b-40"><font color="#dd4646">Software Engineer at Cisco</h5></font>
+                <span onclick="smoothScroll(document.getElementById('resume'))" id="knowmore" data-target="local-scroll"><a href="#resume" class="btn btn-lg btn-primary"><span>Know me more</span><i class="fa fa-arrow-down"></i></a>
                 </span>
                 <a href="report/Resume.pdf" class="btn btn-link" download=""><span><font color="black">Download my CV</font></span><i class="fa fa-download"></i></a>
             </div>
