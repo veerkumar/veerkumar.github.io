@@ -114,126 +114,67 @@
         <div id="ajax-loader"><i class="fa fa-spinner fa-spin"></i></div>
         <!-- FB Like -->
         <div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://staticxx.facebook.com/connect/xd_arbiter/r/uN4_cXtJDGb.js?version=42#channel=f2d5e03ddc9941c&amp;origin=file%3A%2F%2F" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="https://staticxx.facebook.com/connect/xd_arbiter/r/uN4_cXtJDGb.js?version=42#channel=f2d5e03ddc9941c&amp;origin=file%3A%2F%2F" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
-
+         
          <div class="margin-t-100 padding-v-60">
           <div style="margin-left: 10%">
-          <button class="button hastag">Machine Learning</button>
-          <button class="button hastag">ROS</button> 
-          <button class="button hastag">LiDAR</button>
-          <button class="button hastag">Stero Vision </button>
-          <button class="button hastag">3D SLAM</button>  
-           <button class="button hastag">Azure</button>
-          <button class="button hastag">Obstical avoidence</button>
-          <button class="button hastag">Barcode scanning</button>
+          <h3 style="padding-left: 28%"><strong>Bonjour service discovery gatway on eWLC </strong></h3>
+          <button class="button hastag">elastic Wireless controller</button>
+          <button class="button hastag">mDNS</button> 
+          <button class="button hastag">Service Discovery Gateway(SDG)</button>
+          <button class="button hastag">Bonjour </button>
+          <button class="button hastag">wireless</button>  
+           <button class="button hastag">mDNS enterprise solution</button>
+          
         </div>
                         <!-- Resume Box / About -->
              <div class="resume-box" style="    padding-left: 10%; padding-right: 10%;">
                             <span class="icon animated fadeInDown visible" data-animation="fadeInDown"></span>
-                            <h4>About <strong>HackaDrone </strong></h4>
-                            <p class="lead"> Hackadrone is first of its kind, All India Hackathon on UAV/Drones being organized by Cyient Ltd, DJI sponsored by Microsoft and Govt.of Telangana. <a href = "http://www.hackadrone.in" target="blank"> <i>More info</i></a>
-                            <div class="row" style="padding-left: 15%">
-                              <div class="col s12 offset-m2 m8">
-                                <div class="video-container">
-                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/dIA6EjMskrc?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
-                                </div>
-                              </div>
-                            </div>
+                             <h4><strong> Bankground </strong></h4>
+                            <p class="lead">Over last decade, wireless devices penetration has increased drastically. Other than mobile and laptop's we have seen massive increase in wireless adoption rate in utility devices such as printer, home assistant, cleaning bots, TV/monitors, IPad's etc. such ever growing scale demands a elastic IT infrastructure which can scale with demand. To meet such need Cisco brining whole new scalable wireless LAN controller(next gen) called eWLC (elastic Wireless LAN Controller).
+                            <br>
+                            As each device offers some special service or need other service interaction to fulfil a task. For example, to print we need printer service and to use printer service we need printer IP. Previously printers used to be connected to ethernet port and ip's were statically assigned and everyone has to hardcode printer IP to use printer services. With printer going wireless and dynamic ip allocation its really frustrating experience to change printer ip setting before every print. Today we are surrounded but 100's of such services which makes this task nearly impossible. To solve this problem, we can use mDNS protocol.
+                             <a style="color: blue" href = "https://tools.ietf.org/html/rfc6762" target="blank">
+                             <i>More info</i></a>
+                            
                             <br><br>
                             <h4><strong> Problem statement </strong></h4>
                             <p class="lead">
-                           As warehouses are getting bigger with scaling heights, inventory management/auditing is becoming a huge problem. Today in warehouse package fetching and Placing is almost automated but still there is no automated solution for inventory auditing.
-                            Well a video can explain it better!!
+                           multicast DNS (mDNS) is a service discovery protocol. Given its multicast nature, its noisy.  Specially in wireless, it’s so noisy that it might crash your access point (AP) if AP start accepting and flooding mDNS traffic <a style="color: blue" href="https://www.tomsguide.com/us/google-home-chromecast-wifi-fix,news-26465.html"> (Google cromecast crashing routers)  </a> and also multicast traffic choke wireless channel. Hence on by default multicast traffic is dropped (not flooded), which limits service discovery. We developed a Service Discovery Gateway which caches all the service in network (40k clients) and upon mDNS query it gives unicast response to the client to avoid channel congestion.
                           </p>
-                            <div class="row" style="padding-left: 15%">
-                              <div class="col s12 offset-m2 m8">
-                                <div class="video-container">
-                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/h7KHvUkxquY?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
-                                </div>
-                              </div>
-                            </div>
                             <br><br>
-                            <h4><strong> Solution </strong></h4>
+                            <h4><strong> Solution Architecture </strong></h4>
                             <p class="lead">
-                             Warehouse is not a drone friendly environment, it brings many challenges which are consider not significant in open space. For example, Drone navigation system rely on GPS, as GPS signals are very weak they cannot penetrate warehouse walls/roof. To put in simple terms, it’s a GPS denied environment. On top of that, GPS possess 1-5-meter variance which is quite significant in indoor environment. So basically, to identify a location we need to switch to local reference navigation which in turn requires area mapping i.e 3D SLAM. 
-                              Secondly, Drone is highly prone to collision specially in indoor environment, it need environment sensing from all 6 direction (lift, right, front, back, top, bottom).
-                          </p>
-                            <p class="lead" style=""> Technology Stack:
+                             Core of this solution in scalability/elasticity, mDNS runs as a library in every WNCD process. As load increase more instance of WNCD can be spurn, it brings complexity of distributed cache, but queries need to be served from global pool which bring database lock contention and data consistency challenges.
+                             </p>
+                            <div>
+                            <img class="gallery_img" height="50%" width="60%" style="padding-left: 16%;" src="assets/img/photos/mDNS_wireless_arch.png" alt="img">
+                          </div>
+                           <p class="lead">
+                             Advertisment and query work flow
+                           </p><img class="gallery_img" height="50%" width="60%" style="padding-left: 16%;" src="assets/img/photos/query_flow.png" alt="img">
+
+                            <p class="lead" style=""> Features:
                                   <ul style="list-style-type:disc; padding-left: 5%" class="lead">
-                                    <li style="">ML: For object classification</li>
-                                    <li>Stero Camera: To make point cloud and  SLAM </li>
-                                    <li>ROS: Path planning and navigation i.e move_base</li>
-                                    <li>Azure: cloud storage</li>
-                                    <li>OpenCV: Barcode scanning</li>
-                                    <li>DJI ROS SDK</li>
-                                    <li>Android app: For user control, live feed, and inventory display</li>
-                                    <li>Nvidia TX2: onboard heavy computing</li>
-                                    
+                                    <li style="">mDNS gateway functionality</li>
+                                    <li>mDNS gateway service policy </li>
+                                    <li>Mobility support for mDNS gateway: <br>Intra & inter WNCd, Intra & Inter Controller Roaming
+                                      <br> Inter controller L2/L3 Roaming</li>
+                                    <li>Master list of service types</li>
+                                    <li>mDNS gateway with Guest Anchor support</li>
+                                    <li>WebUI configuration and service monitoring support</li>
+                                    <li>mDNS default service policy</li>
+                                    <li>Yang / Netconf</li>         
                                   </ul>  
                           </p>
-                          <div>
-                            <img class="gallery_img" height="50%" width="60%" style="padding-left: 16%;" src="assets/img/photos/warehouse_solution.png" alt="img">
-                              
-                          </div>
+                          <p class="lead"> This solution is replacment of mDNS on AirOS controller with high scalability and advance features. <a style="color: blue;" href=" https://www.cisco.com/c/en/us/td/docs/wireless/controller/technotes/8-1/WLAN-Bonjour-DG/WLAN-Bonjour-DG.html">Checkout official documentation </a></p>
+                          
              </div>
         </div>
 
         <br><br><br><br>
 
 
-         <section id="gallery">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <div id="gallerySLide" class="gallery_area">
-                <a href="assets/img/drone/1.jpg" title="Anticipating the flight...">
-                  <img class="gallery_img" src="assets/img/drone/1.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/2.jpg" title="Hackadrone-2018, India's first drone hackathon conducted by Microsoft, Cyient and DJI">
-                  <img class="gallery_img" src="assets/img/drone/2.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/3.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/3.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/4.jpg" title="Warehouse management drone - the one we developed">
-                  <img class="gallery_img" src="assets/img/drone/4.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/5.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/5.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/6.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/6.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/7.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/7.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                  <a href="assets/img/drone/8.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/8.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/9.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/9.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/10.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/10.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/11.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/11.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        
         <!--=========== BEGIN FOOTER SECTION ================-->
     <footer id="footer">
       <!-- Start footer top area -->
