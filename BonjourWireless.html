@@ -130,21 +130,21 @@
              <div class="resume-box" style="    padding-left: 10%; padding-right: 10%;">
                             <span class="icon animated fadeInDown visible" data-animation="fadeInDown"></span>
                              <h4><strong> Bankground </strong></h4>
-                            <p class="lead">Over last decade, wireless devices penetration has increased drastically. Other than mobile and laptop's we have seen massive increase in wireless adoption rate in utility devices such as printer, home assistant, cleaning bots, TV/monitors, IPad's etc. such ever growing scale demands a elastic IT infrastructure which can scale with demand. To meet such need Cisco brining whole new scalable wireless LAN controller(next gen) called eWLC (elastic Wireless LAN Controller).
+                            <p class="lead">Over the last decade, wireless devices penetration has increased drastically. Other than mobile phones and laptops we have seen massive increase in wireless adoption rate in utility devices such as printers, home assistants, cleaning bots, TV/monitors, IPads etc. Such ever growing scale demands an elastic IT infrastructure which can scale with the demand. To meet such need Cisco is brining whole new scalable wireless LAN controller(next gen) called eWLC (elastic Wireless LAN Controller).
                             <br>
-                            As each device offers some special service or need other service interaction to fulfil a task. For example, to print we need printer service and to use printer service we need printer IP. Previously printers used to be connected to ethernet port and ip's were statically assigned and everyone has to hardcode printer IP to use printer services. With printer going wireless and dynamic ip allocation its really frustrating experience to change printer ip setting before every print. Today we are surrounded but 100's of such services which makes this task nearly impossible. To solve this problem, we can use mDNS protocol.
+                            Each device offers some special service or need other service interaction to fulfil a task. For example, to print we need printer service and to use printer service we need printer IP. Previously printers used to be connected to ethernet port and IP's were statically assigned and everyone has to hardcode printer IP to use printer services. With printers going wireless and dynamic IP allocation it is really a frustrating experience to change printer IP settings before every print. Today we are surrounded but 100's of such services which makes this task nearly impossible. To solve this problem, we can use mDNS protocol.
                              <a style="color: blue" href = "https://tools.ietf.org/html/rfc6762" target="blank">
                              <i>More info</i></a>
                             
                             <br><br>
                             <h4><strong> Problem statement </strong></h4>
                             <p class="lead">
-                           multicast DNS (mDNS) is a service discovery protocol. Given its multicast nature, its noisy.  Specially in wireless, it’s so noisy that it might crash your access point (AP) if AP start accepting and flooding mDNS traffic <a style="color: blue" href="https://www.tomsguide.com/us/google-home-chromecast-wifi-fix,news-26465.html"> (Google cromecast crashing routers)  </a> and also multicast traffic choke wireless channel. Hence on by default multicast traffic is dropped (not flooded), which limits service discovery. We developed a Service Discovery Gateway which caches all the service in network (40k clients) and upon mDNS query it gives unicast response to the client to avoid channel congestion.
+                           multicast DNS (mDNS) is a service discovery protocol. Given its multicast nature, it is noisy.  Specially in wireless, it’s so noisy that it might crash your access point (AP) if AP starts accepting and flooding mDNS traffic <a style="color: blue" href="https://www.tomsguide.com/us/google-home-chromecast-wifi-fix,news-26465.html"> (Google cromecast crashing routers)  </a> Also multicast traffic chokes wireless channel. Hence by default multicast traffic is dropped (not flooded), which limits service discovery. We developed a Service Discovery Gateway which caches all the service in network (40k clients) and upon mDNS query it gives unicast response to the client to avoid channel congestion.
                           </p>
                             <br><br>
                             <h4><strong> Solution Architecture </strong></h4>
                             <p class="lead">
-                             Core of this solution in scalability/elasticity, mDNS runs as a library in every WNCD process. As load increase more instance of WNCD can be spurn, it brings complexity of distributed cache, but queries need to be served from global pool which bring database lock contention and data consistency challenges.
+                             Core of this solution in scalability/elasticity. mDNS runs as a library in every WNCD process. As load increase more instance of WNCD can be spurn, it brings complexity of distributed cache. But queries need to be served from global pool which brings database lock contention and data consistency challenges.
                              </p>
                             <div>
                             <img class="gallery_img" height="50%" width="60%" style="padding-left: 16%;" src="assets/img/photos/mDNS_wireless_arch.png" alt="img">
@@ -157,7 +157,7 @@
                                   <ul style="list-style-type:disc; padding-left: 5%" class="lead">
                                     <li style="">mDNS gateway functionality</li>
                                     <li>mDNS gateway service policy </li>
-                                    <li>Mobility support for mDNS gateway: <br>Intra & inter WNCd, Intra & Inter Controller Roaming
+                                    <li>Mobility support for mDNS gateway: <br>Intra & inter WNCD, Intra & Inter Controller Roaming
                                       <br> Inter controller L2/L3 Roaming</li>
                                     <li>Master list of service types</li>
                                     <li>mDNS gateway with Guest Anchor support</li>
