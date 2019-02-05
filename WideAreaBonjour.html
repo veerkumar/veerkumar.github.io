@@ -61,6 +61,16 @@
       cursor: pointer;
     }
     .hashtag {border-radius: 50%;}
+    .column {
+        float: left;
+        width: 45%;
+        padding: 5px;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
     </style>
      
   </head>
@@ -114,126 +124,108 @@
         <div id="ajax-loader"><i class="fa fa-spinner fa-spin"></i></div>
         <!-- FB Like -->
         <div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://staticxx.facebook.com/connect/xd_arbiter/r/uN4_cXtJDGb.js?version=42#channel=f2d5e03ddc9941c&amp;origin=file%3A%2F%2F" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="https://staticxx.facebook.com/connect/xd_arbiter/r/uN4_cXtJDGb.js?version=42#channel=f2d5e03ddc9941c&amp;origin=file%3A%2F%2F" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
-
+         
          <div class="margin-t-100 padding-v-60">
           <div style="margin-left: 10%">
-          <button class="button hastag">Machine Learning</button>
-          <button class="button hastag">ROS</button> 
-          <button class="button hastag">LiDAR</button>
-          <button class="button hastag">Stero Vision </button>
-          <button class="button hastag">3D SLAM</button>  
-           <button class="button hastag">Azure</button>
-          <button class="button hastag">Obstical avoidence</button>
-          <button class="button hastag">Barcode scanning</button>
+          <h3 style="padding-left: 28%"><strong>Wide area bonjour (WAB)/ Wide area SDG </strong></h3>
+          <button class="button hastag">Wide area network</button>
+          <button class="button hastag">mDNS/Bonjour</button> 
+          <button class="button hastag">Service Discovery Gateway(SDG)</button>
+          <button class="button hastag">APICEM </button>
+          <button class="button hastag">DNAC </button>
+          <button class="button hastag">Wired</button>  
+           <button class="button hastag">mDNS enterprise solution</button>
+          
         </div>
                         <!-- Resume Box / About -->
-             <div class="resume-box" style="    padding-left: 10%; padding-right: 10%;">
+             <div class="resume-box" style="padding-left: 10%; padding-right: 10%;">
                             <span class="icon animated fadeInDown visible" data-animation="fadeInDown"></span>
-                            <h4>About <strong>HackaDrone </strong></h4>
-                            <p class="lead"> Hackadrone is first of its kind, All India Hackathon on UAV/Drones being organized by Cyient Ltd, DJI sponsored by Microsoft and Govt.of Telangana. <a href = "http://www.hackadrone.in" target="blank"> <i>More info</i></a>
-                            <div class="row" style="padding-left: 15%">
-                              <div class="col s12 offset-m2 m8">
-                                <div class="video-container">
-                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/dIA6EjMskrc?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
-                                </div>
-                              </div>
+            
+                            <p class="lead" style="font-family: verdana !important; " > Service Discovery Gateway (SDG) is used for discovering services across vlan's, which is not possible with mDNS protocol as mDNS is a link local protocol. SDG solution for <strong>wired</strong> network is available from last 8+ years and it is deployed across the world.
+                              <br>
+                              But with BYOD (Bring Your Own Device) and increase in service providing devices like Apple TV, laptops, music service, printer and various other IOT devices, its became quite cumbersome for an IT administration in an enterprise to monitor and enforce device policies. For example, Apple new campus (Ring) alone contains 200+ such SDG's, Monitoring service in such 200+ network is just not possible but changing service policies is another nightmare, sometime it takes a month to configure across. Also without insight into what kind of services network is hosting, its not possible to derive any policies decision. Similar examples exist in other enterprises, as well as in schools and universities. 
+                               <br>
+                               To solve this problem, we at Cisco build an enterprise solution which gives service monitoring and 100's of other features. which make network administrator job so ease that it just takes few clicks to push any policy and give powerful control to change network rules to meet emerging user needs.
+                               <a style="color: blue" href = "https://www.cisco.com/c/en/us/solutions/enterprise-networks/dna-service-bonjour.html" target="blank">
+                               <i> More info</i></a> 
+                             </p>
+                             <h4><strong> Solution Architecture </strong></h4>
+                            <p class="lead" style="font-family: verdana !important;">
+                               This solution consists of several SDG's and APICEM/DNAC (Cloud controller). Each SDG maintains a secure connection with the controller to exchange services over BCP(Bonjour control protocol). 
+                             </p>
+                              <div class="row"    style="float: right">
+                                <div class="column">
+                                      <img class="gallery_img"  style="width: 100%; height: 32em" src="assets/img/photos/wab archi 2.png" alt="img">
+                                  </div>
+                                  <div class="column">
+                                      <img class="gallery_img"  style="width: 100%" src="assets/img/photos/wab archi.png" alt="img">
+                                  </div> 
+                                  
+                              </div> 
+                              <br>
+                            <div style="clear: both; padding-top: 3%" > <h4><strong>User case study</strong> </h4> 
+                            <p class="lead" style="font-family: verdana !important;padding-left: 3%"> <a href=" https://www.cisco.com/c/dam/en/us/solutions/collateral/enterprise-networks/nb-09-st-vrain-valley-case-study-en.pdf" style="color: blue"> Link</a> </p>
                             </div>
-                            <br><br>
-                            <h4><strong> Problem statment </strong></h4>
-                            <p class="lead">
-                            As warehouse's are getting bigger with scaling heights, invertory managment/auditing is becoming a huge problem. Today in warehouse package fetching and Placing is almost automated but still there is no automated solution for invertory auditing.
-                            Well a video can explain it better!!
-                          </p>
-                            <div class="row" style="padding-left: 15%">
-                              <div class="col s12 offset-m2 m8">
-                                <div class="video-container">
-                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/h7KHvUkxquY?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
-                                </div>
-                              </div>
-                            </div>
-                            <br><br>
-                            <h4><strong> Solution </strong></h4>
-                            <p class="lead">
-                              Warehouse is not a drone friendly enviroment, it brings many challenges which are consider not significant in open space. For example Drone navigation system rely on GPS, as GPS signals are very weak they cannot penetrate warehouse walls/roof. To put in simple terms, its a GPS denied enviroment. On top of that, GPS possess 1-5 meter variance which is quite significant in indoor enviroment. So basically to identify a location we need to switch to local reference navigation which in turn requires area mapping i.e 3D SLAM. 
-                              Secondly, Drone is highly prone to collision specially in indoor enviroment, it need enviroment sensing from all 6 direction(lift, right, front, back, top, bottom).
-                          </p>
-                            <p class="lead" style=""> Technology Stack:
-                                  <ul style="list-style-type:disc; padding-left: 5%" class="lead">
-                                    <li style="">ML: For object classification</li>
-                                    <li>Stero Camera: To make point cloud and  SLAM </li>
-                                    <li>ROS: Path planning and navigation i.e move_base</li>
-                                    <li>Azure: cloud storage</li>
-                                    <li>OpenCV: Barcode scanning</li>
-                                    <li>DJI ROS SDK</li>
-                                    <li>Android app: For user control, live feed, and inventory display</li>
-                                    <li>Nvidia TX2: onboard heavy computing</li>
-                                    
-                                  </ul>  
-                          </p>
-                          <div>
-                            <img class="gallery_img" height="50%" width="60%" style="padding-left: 16%;" src="assets/img/photos/warehouse_solution.png" alt="img">
-                              
-                          </div>
+                            <h4> <strong>Awards</strong></h4>
+                             <p class="lead" style="font-family: verdana !important;">
+                               Wide area Bonjour(WAB) solution won 2nd place @ Cisco Toolapalooza(2018) innovation contest
+for ML and Analytics application. 
+                             </p>
+                             <div class="row"    style="float: right; padding-left: 5%">
+                                <div class="column">
+                                      <img class="gallery_img"  style="width: 100%; height: 32em" src="assets/img/photos/wab_stall.png" alt="img">
+                                  </div>
+                                  <div class="column">
+                                      <img class="gallery_img"  style="width: 100%" src="assets/img/photos/wab_second_prize.jpeg" alt="img">
+                                  </div> 
+                                  
+                              </div> 
+                              <div style="clear: both;padding-top: 5%">
+                          <p class="lead" style="font-family: verdana !important;">
+                              <strong> Wide area Bonjour(WAB) User interfaces </strong>
+                             </p>
+                             </div>
+      <section id="gallery">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div id="gallerySLide" class="gallery_area">
+                    <a href="assets/img/wab/service distribution.png" title="Service distribution chart">
+                      <img class="gallery_img" src="assets/img/wab/service distribution.png" alt="img" />
+                    <span class="view_btn">View</span>
+                    </a>
+                    <a href="assets/img/wab/service distribution1.png" title="Creating filters">
+                      <img class="gallery_img" src="assets/img/wab/service distribution1.png" alt="img" />
+                      <span class="view_btn">View</span>
+                    </a>
+                    <a href="assets/img/wab/service distribution2.png" title="service distribution chart">
+                      <img class="gallery_img" src="assets/img/wab/service distribution2.png" alt="img" />
+                      <span class="view_btn">View</span>
+                    </a>
+                    <a href="assets/img/wab/service monitoring.png" title="List of service across enterprise">
+                      <img class="gallery_img" src="assets/img/wab/service monitoring.png" alt="img" />
+                      <span class="view_btn">View</span>
+                    </a>
+                    <a href="assets/img/wab/service policy.png" title=" ">
+                      <img class="gallery_img" src="assets/img/wab/service policy.png" alt="img" />
+                      <span class="view_btn">View</span>
+                    </a>
+                                 
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+                           
+                          <p class="lead"> This Page cannot justfy enough for the solution, Please <a style="color: blue;" href=" https://www.cisco.com/c/en/us/solutions/enterprise-networks/dna-service-bonjour.html ">Checkout official page </a></p>
+                          
              </div>
         </div>
 
         <br><br><br><br>
 
 
-         <section id="gallery">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <div id="gallerySLide" class="gallery_area">
-                <a href="assets/img/drone/1.jpg" title="Anticipating the flight...">
-                  <img class="gallery_img" src="assets/img/drone/1.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/2.jpg" title="Hackadrone-2018, India's first drone hackathon conducted by Microsoft, Cyient and DJI">
-                  <img class="gallery_img" src="assets/img/drone/2.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/3.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/3.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/4.jpg" title="Warehouse management drone - the one we developed">
-                  <img class="gallery_img" src="assets/img/drone/4.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/5.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/5.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/6.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/6.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/7.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/7.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                  <a href="assets/img/drone/8.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/8.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/9.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/9.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/10.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/10.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="assets/img/drone/11.jpg" title="">
-                  <img class="gallery_img" src="assets/img/drone/11.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        
         <!--=========== BEGIN FOOTER SECTION ================-->
     <footer id="footer">
       <!-- Start footer top area -->
