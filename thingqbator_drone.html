@@ -62,11 +62,6 @@
       cursor: pointer;
     }
     .hashtag {border-radius: 50%;}
-
-    .list_items {
-      font-family: Lucida Calligraphy !important;
-      font-size: 0.8em !important; 
-    }
     </style>
      
   </head>
@@ -123,98 +118,116 @@
 
          <div class="margin-t-100 padding-v-60">
           <div style="margin-left: 10%">
-          <button class="button hastag">Website Development</button>
-          <button class="button hastag">Online food</button>
-          <button class="button hastag">Ecommerce</button>
-          <button class="button hastag">angularJs</button> 
-          <button class="button hastag">PHP</button>
-          <button class="button hastag">CSS</button>
-          <button class="button hastag">Mysql</button>  
-           <button class="button hastag">Payments</button>
+          <button class="button hastag">Machine Learning</button>
+          <button class="button hastag">ROS</button> 
+          <button class="button hastag">LiDAR</button>
+          <button class="button hastag">Stero Vision </button>
+          <button class="button hastag">3D SLAM</button>  
+           <button class="button hastag">Azure</button>
+          <button class="button hastag">Obstical avoidence</button>
+          <button class="button hastag">Barcode scanning</button>
         </div>
                         <!-- Resume Box / About -->
-             <div class="resume-box" style="    padding-left: 8%; padding-right: 10%;">
+             <div class="resume-box" style="    padding-left: 10%; padding-right: 10%;">
                             <span class="icon animated fadeInDown visible" data-animation="fadeInDown"></span>
-                            <h4>About <strong>Eatbliss </strong></h4>
-                            <p style="font-family:verdana!important;font-size: 1.4em !important;" class="lead"> Eatbliss is an online
-                restaurant that delivers the food of your choice to your doorstep.
-                It’s a pure vegetarian cookery which offers you wide variety of food from different ethnicities of
-                Indian cuisine.
-                It owns the entire value chain i.e. right from procuring quality raw materials to preparing them in the
-                best way possible and finally delivering it to your doorstep.
-                Eatbliss deliver you the tastiest, healthiest and fresh comfort food straight from its Kitchen to
-                your chosen destination. It’s basically a pure vegetarian bliss!!
-                It reduces your work to just clicking & ordering. Sit back and enjoy scrumptious food at your comfort
-                 <a href = "http://www.eatbliss.com"  style="color: blue" target="blank"> <i>More info</i></a>
-             </div>
-             <div class="resume-box" style="    padding-left: 8%; padding-right: 10%;">
-                            <span class="icon animated fadeInDown visible" data-animation="fadeInDown"></span>
-                            <h4><strong>Project </strong></h4>
-                            <p style="font-size: 1.4em !important; font-family: verdana !important; " class="lead"> 
-                           In 2015, Food tech startups were on boom. Effect of that, almost every restaurant chain wanted to come online. As a Freelance we took this project to build an end to end online food ordering system. <br>Feature includes.
-                            </p>
-                             <p class="lead" style="font-family: verdana !important;font-size: 1.4em !important;" > Feature list:
-                                  <ul style="list-style-type:disc; padding-left: 5%; font-family: verdana !important; " class="lead">
-                                    <li class="list_items">User registration and Login</li>
-                                    <li class="list_items">Catalog search and display </li>
-                                    <li class="list_items">Cart functionality with session awareness</li>
-                                    <li class="list_items">Payments</li>
-                                    <li class="list_items">Complete user profile managment</li>
-                                    <li class="list_items">Order tracking</li>
-                                    <li class="list_items">Bill managment</li>
-                                    <li class="list_items">Admin panel with order management and analytics</li> 
+                            <h4>About <strong>HackaDrone </strong></h4>
+                            <p class="lead"> Hackadrone is first of its kind, All India Hackathon on UAV/Drones being organized by Cyient Ltd, DJI sponsored by Microsoft and Govt.of Telangana. <a href = "http://www.hackadrone.in" target="blank"> <i>More info</i></a>
+                            <div class="row" style="padding-left: 15%">
+                              <div class="col s12 offset-m2 m8">
+                                <div class="video-container">
+                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/dIA6EjMskrc?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                            </div>
+                            <br><br>
+                            <h4><strong> Problem statement </strong></h4>
+                            <p class="lead">
+                           As warehouses are getting bigger with scaling heights, inventory management/auditing is becoming a huge problem. Today in warehouse package fetching and Placing is almost automated but still there is no automated solution for inventory auditing.
+                            Well a video can explain it better!!
+                          </p>
+                            <div class="row" style="padding-left: 15%">
+                              <div class="col s12 offset-m2 m8">
+                                <div class="video-container">
+                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/h7KHvUkxquY?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                            </div>
+                            <br><br>
+                            <h4><strong> Solution </strong></h4>
+                            <p class="lead">
+                             Warehouse is not a drone friendly environment, it brings many challenges which are consider not significant in open space. For example, Drone navigation system rely on GPS, as GPS signals are very weak they cannot penetrate warehouse walls/roof. To put in simple terms, it’s a GPS denied environment. On top of that, GPS possess 1-5-meter variance which is quite significant in indoor environment. So basically, to identify a location we need to switch to local reference navigation which in turn requires area mapping i.e 3D SLAM. 
+                              Secondly, Drone is highly prone to collision specially in indoor environment, it need environment sensing from all 6 direction (lift, right, front, back, top, bottom).
+                          </p>
+                            <p class="lead" style=""> Technology Stack:
+                                  <ul style="list-style-type:disc; padding-left: 5%" class="lead">
+                                    <li style="">ML: For object classification</li>
+                                    <li>Stero Camera: To make point cloud and  SLAM </li>
+                                    <li>ROS: Path planning and navigation i.e move_base</li>
+                                    <li>Azure: cloud storage</li>
+                                    <li>OpenCV: Barcode scanning</li>
+                                    <li>DJI ROS SDK</li>
+                                    <li>Android app: For user control, live feed, and inventory display</li>
+                                    <li>Nvidia TX2: onboard heavy computing</li>
+                                    
                                   </ul>  
                           </p>
-                          <h4> Page layouts </h4>
+                          <div>
+                            <img class="gallery_img" height="50%" width="60%" style="padding-left: 16%;" src="assets/img/photos/warehouse_solution.png" alt="img">
+                              
+                          </div>
+             </div>
         </div>
+
+        <br><br><br><br>
+
 
          <section id="gallery">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div id="gallerySLide" class="gallery_area">
-                <a href="assets/img/eatbliss/1_Home.jpg" title="Home page">
-                  <img class="gallery_img" src="assets/img/eatbliss/1_Home.jpg" alt="img" />
+                <a href="assets/img/drone/1.jpg" title="Anticipating the flight...">
+                  <img class="gallery_img" src="assets/img/drone/1.jpg" alt="img" />
                 <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/eatbliss/2_location.jpg" title="Second page">
-                  <img class="gallery_img" src="assets/img/eatbliss/2_location.jpg" alt="img" />
+                <a href="assets/img/drone/2.jpg" title="Hackadrone-2018, India's first drone hackathon conducted by Microsoft, Cyient and DJI">
+                  <img class="gallery_img" src="assets/img/drone/2.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/eatbliss/3_address.jpg" title="Address page">
-                  <img class="gallery_img" src="assets/img/eatbliss/3_address.jpg" alt="img" />
+                <a href="assets/img/drone/3.jpg" title="">
+                  <img class="gallery_img" src="assets/img/drone/3.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/eatbliss/3.1 address edit.jpg" title="Address edit page">
-                  <img class="gallery_img" src="assets/img/eatbliss/3.1 address edit.jpg" alt="img" />
+                <a href="assets/img/drone/4.jpg" title="Warehouse management drone - the one we developed">
+                  <img class="gallery_img" src="assets/img/drone/4.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/eatbliss/4_My_account.jpg" title="">
-                  <img class="gallery_img" src="assets/img/eatbliss/4_My_account.jpg" alt="img" />
+                <a href="assets/img/drone/5.jpg" title="">
+                  <img class="gallery_img" src="assets/img/drone/5.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/eatbliss/5_About us.jpg" title="">
-                  <img class="gallery_img" src="assets/img/eatbliss/5_About us.jpg" alt="img" />
+                <a href="assets/img/drone/6.jpg" title="">
+                  <img class="gallery_img" src="assets/img/drone/6.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/eatbliss/6_Failure.jpg" title="">
-                  <img class="gallery_img" src="assets/img/eatbliss/6_Failure.jpg" alt="img" />
+                <a href="assets/img/drone/7.jpg" title="">
+                  <img class="gallery_img" src="assets/img/drone/7.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                  <a href="assets/img/eatbliss/7_login.jpg" title="">
-                  <img class="gallery_img" src="assets/img/eatbliss/7_login.jpg" alt="img" />
+                  <a href="assets/img/drone/8.jpg" title="">
+                  <img class="gallery_img" src="assets/img/drone/8.jpg" alt="img" />
                 <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/eatbliss/8_FAQs.jpg" title="">
-                  <img class="gallery_img" src="assets/img/eatbliss/8_FAQs.jpg" alt="img" />
+                <a href="assets/img/drone/9.jpg" title="">
+                  <img class="gallery_img" src="assets/img/drone/9.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                <a href="aassets/img/eatbliss/9_Contact us.jpg" title="">
-                  <img class="gallery_img" src="assets/img/eatbliss/9_Contact us.jpg" alt="img" />
+                <a href="assets/img/drone/10.jpg" title="">
+                  <img class="gallery_img" src="assets/img/drone/10.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/eatbliss/10.png" title="">
-                  <img class="gallery_img" src="assets/img/eatbliss/10.png" alt="img" />
+                <a href="assets/img/drone/11.jpg" title="">
+                  <img class="gallery_img" src="assets/img/drone/11.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
             </div>
