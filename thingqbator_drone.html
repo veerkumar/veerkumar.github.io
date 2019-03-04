@@ -84,7 +84,7 @@
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
 
                 <li><a href="index.html">Home</a></li>
-                <li><a href="works.html">My works</a></li>          
+                <li><a href="works.html">My work</a></li>          
               </ul>           
             </div>
           </div>     
@@ -131,59 +131,62 @@
              <div class="resume-box" style="    padding-left: 10%; padding-right: 10%;">
                             <span class="icon animated fadeInDown visible" data-animation="fadeInDown"></span>
                             <h4>About <strong>Thingqbator </strong></h4>
-                            <p class="lead"> This is a research lab at Cisco where me and my team developed UAVs for different use cases. We developed drones that does surveillance with pedestrian detection & tracking, medical use case drones, warehouse management drones. 
+                            <p style="font-family:verdana!important;font-size: 1.4em !important;" class="lead">ThingQbator is a global network of makerspaces for Cisco employees, which was started 4 year ago at Cisco Bangalore office. Now we have branches in San Jose, London, Pune, Dubai and Krakow. Lab is equipped with the latest gear for people to build awesome prototypes in domains such as IOT, Robotics/Autonomous Vehicle, AI/ML and AR/VR.</p>
+                            <h4>Journey so far</h4>
+                            <p style="font-family:verdana!important;font-size: 1.4em !important;" class="lead"> I joined thingqbator at very beginning, since then I worked on intelligent robotics solution and also provide mentorship to teams who joins our cohort (7 cohorts and counting).  Me and my team works on various use cases of UAVs(multirotor) and ground bots (turtle & Heavy duty 4wd). Over time we have demonstrated following features:
+                              <ul  style="font-family:verdana!important;font-size: 1.4em !important; list-style-type:disc; padding-left: 5%" class="lead">
+                                    <li>Autonomous drone with on the fly mission upload</li>
+                                    <li>Vechile control: Mobile app (For user control, live feed, and inventory display) and radio(as usual)</li>
+                                    <li>Object classification</li>
+                                    <li>Collion detection and avoidance</li>
+                                    <li>Pedestrian detection & tracking</li>
+                                    <li>2D and 3D SLAM: Path planning and navigation i.e move_base</li>
+                                    <li>Precision landing mechanism (As GPS has few meter of variance)</li>
+                                    <li>DJI ROS SDK integration</li>
+                                    <li>Payload delivery mechanism</li>
+                                    <li>Integration with Azure</li>
+                                    <li>Zed and LiDAR integration</li>
+                              </ul>  </p>
+                              <p style="font-family:verdana!important;font-size: 1.4em !important;" class="lead">
+                              These features can be enabled on each platform based on payload carrying capacity. Majorly targeted uses are related to surveillance, medical/package delivery and warehouse management. <br>
 
-                            The initial drone we developed had features including following a path specified by GPS waypoints, following a specific person/target, live video feed transmission. It took a lots of iterations of development, testing and debugging before a fully fledged version of the functional drone was ready. Here is one of the several crashes the drone went through. In this mission, drone had to autonomously navigate through a predetermined path. Since it was a cloudy, windy day and there was a lot of electromagnetic interference from huge Cisco Labs , GPS & air speed estimation became noisy. At the end of the mission, drone estimated ground zero at 6 feet above the ground and disarmed itself, finally crashed.
+                            The initial drone had features like following a path specified by GPS waypoints, following a specific person/target, live video feed transmission. It took a lots of iterations of development, testing and debugging before a functional drone was ready. Here is one of the several crashes the drone went through. In this mission, drone had to autonomously navigate through a predetermined path. Since it was a cloudy, windy day and there was a lot of electromagnetic interference from huge Cisco Labs , GPS & air speed estimation became noisy. At the end of the mission, drone estimated ground zero at 6 feet above the ground and disarmed itself, finally crashed.</p>
                             <div class="row" style="padding-left: 15%">
                               <div class="col s12 offset-m2 m8">
                                 <div class="video-container">
-                                  <iframe width="640" height="360" src="https://www.youtube.com/watch?v=1DYuL-yhODk" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/1DYuL-yhODk?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
                                 </div>
                               </div>
                             </div>
                             <br><br>
                             <h4><strong> Pick and place mechanism for drones - Medical use case</strong></h4>
-                            <p class="lead">
-                           Drones can be used to deliver drugs to remote areas especially when there is an emergency or a natural calamity like floods. To pick up drugs from warehouse and drop it at another specific location,  we developed a solution that lands the drone precisely and also has a robust pick-up and drop mechanism. At first, the drone landing has to happen precisely for which relying only on GPS is not enough. For this we developed a solution combining GPS and image markers. Once the drone lands, to attach the payload to the drone, we developed a ball socket joint system which you can see in the image below. We 3D printed most of the parts required and tested it out in entirety with the drone.
+                            <p style="font-family:verdana!important;font-size: 1.4em !important;" class="lead">
+                           Drones can be used to deliver drugs to remote areas especially when there is an emergency or a natural calamity like floods. To pick up drugs from warehouse and dropping at another specific location,  we developed a solution that lands the drone precisely and also has a robust pick-up and drop mechanism. At first, the drone landing has to happen precisely for which relying only on GPS is not enough. For this we developed a solution combining GPS and image markers. Once the drone lands, to attach the payload to the drone, we developed a ball socket joint system which you can see in the image below. We 3D printed most of the parts required and tested it out in entirety with the drone.
                           </p>
                           <div>
                           <img class="gallery_img" height="50%" width="60%" style="padding-left: 16%;" src="assets/img/thingqbator_drone/pickup.jpg" alt="img">
                           </div>
-                          <br><br>
-                          <!--   <h4><strong> Solution </strong></h4>
-                            <p class="lead">
-                             Warehouse is not a drone friendly environment, it brings many challenges which are consider not significant in open space. For example, Drone navigation system rely on GPS, as GPS signals are very weak they cannot penetrate warehouse walls/roof. To put in simple terms, it’s a GPS denied environment. On top of that, GPS possess 1-5-meter variance which is quite significant in indoor environment. So basically, to identify a location we need to switch to local reference navigation which in turn requires area mapping i.e 3D SLAM. 
-                              Secondly, Drone is highly prone to collision specially in indoor environment, it need environment sensing from all 6 direction (lift, right, front, back, top, bottom).
+                          <br>
+                          <p style="font-family:verdana!important;font-size: 1.4em !important;" class="lead">
+                            Here is video of autonomous path tracking with live feed.
                           </p>
-                            <p class="lead" style=""> Technology Stack:
-                                  <ul style="list-style-type:disc; padding-left: 5%" class="lead">
-                                    <li style="">ML: For object classification</li>
-                                    <li>Stero Camera: To make point cloud and  SLAM </li>
-                                    <li>ROS: Path planning and navigation i.e move_base</li>
-                                    <li>Azure: cloud storage</li>
-                                    <li>OpenCV: Barcode scanning</li>
-                                    <li>DJI ROS SDK</li>
-                                    <li>Android app: For user control, live feed, and inventory display</li>
-                                    <li>Nvidia TX2: onboard heavy computing</li>
-                                    
-                                  </ul>  
-                          </p>
-                          <div>
-                            <img class="gallery_img" height="50%" width="60%" style="padding-left: 16%;" src="assets/img/photos/warehouse_solution.png" alt="img">
-                              
-                          </div> -->
+                           <div class="row" style="padding-left: 15%">
+                              <div class="col s12 offset-m2 m8">
+                                <div class="video-container">
+                                  <iframe width="640" height="360" src="https://www.youtube.com/embed/xrxnuo8a0sw?rel=0?ecver=1" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                            </div>
+                          
              </div>
         </div>
-
-        <br><br><br><br>
-
 
          <section id="gallery">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div id="gallerySLide" class="gallery_area">
-                <a href="assets/img/thingqbator_drone/gallery/1.jpg" title="Drones ready for test">
+                <a href="assets/img/thingqbator_drone/gallery/1.jpg" title="After few crash :)">
                   <img class="gallery_img" src="assets/img/thingqbator_drone/gallery/1.jpg" alt="img" />
                 <span class="view_btn">View</span>
                 </a>
@@ -195,7 +198,7 @@
                   <img class="gallery_img" src="assets/img/thingqbator_drone/gallery/3.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/thingqbator_drone/gallery/4.jpg" title="Me examining the drone">
+                <a href="assets/img/thingqbator_drone/gallery/4.jpg" title="Lidar and Pixflow censor">
                   <img class="gallery_img" src="assets/img/thingqbator_drone/gallery/4.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
@@ -203,7 +206,11 @@
                   <img class="gallery_img" src="assets/img/thingqbator_drone/gallery/5.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
-                <a href="assets/img/thingqbator_drone/gallery/6.jpg" title="One of the demonstrations">
+                <a href="assets/img/thingqbator_drone/gallery/5.1.jpg" title="Scene from the lab">
+                  <img class="gallery_img" src="assets/img/thingqbator_drone/gallery/5.1.jpg" alt="img" />
+                  <span class="view_btn">View</span>
+                </a>
+                <a href="assets/img/thingqbator_drone/gallery/6.jpg" title="One of the demonstrations with VP of engineering">
                   <img class="gallery_img" src="assets/img/thingqbator_drone/gallery/6.jpg" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
@@ -213,6 +220,10 @@
                 </a>
                   <a href="assets/img/thingqbator_drone/gallery/8.jpg" title="Up in the air">
                   <img class="gallery_img" src="assets/img/thingqbator_drone/gallery/8.jpg" alt="img" />
+                <span class="view_btn">View</span>
+                </a>
+                 <a href="assets/img/thingqbator_drone/gallery/9.png" title="CAD: motor holder">
+                  <img class="gallery_img" src="assets/img/thingqbator_drone/gallery/9.png" alt="img" />
                 <span class="view_btn">View</span>
                 </a>
             </div>
